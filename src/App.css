@@ -3,8 +3,38 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 70px;
   pointer-events: none;
+}
+
+.Left-nav {
+  min-width: 20%;
+  height: 100%;
+  padding-left: 1%;
+  justify-content: left;
+}
+
+.Right-nav {
+  max-width: 50%;
+  height:100%;
+  padding-right: 2%;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+}
+
+.Nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+
+}
+.nav-bar > li {
+  padding: 25px;
+  font-size: smaller;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +45,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
+  max-height: 10vh;
+  box-shadow: 0px 0px 8px 2px grey;
   display: flex;
   flex-direction: column;
   align-items: center;
