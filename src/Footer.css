@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
+    padding-left: 0;
 }
 .copyright {
     font-size: large;
@@ -32,6 +33,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 .inside > li {

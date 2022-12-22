@@ -16,6 +16,7 @@
 }
 
 .Right-nav {
+  min-width: 10%;
   max-width: 50%;
   height:100%;
   padding-right: 2%;
