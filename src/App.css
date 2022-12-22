@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -8,7 +9,7 @@
 }
 
 .Left-nav {
-  min-width: 20%;
+  max-width: 20%;
   height: 100%;
   padding-left: 1%;
   justify-content: left;
@@ -45,8 +46,8 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 10vh;
-  max-height: 10vh;
+  min-height: 13vh;
+  max-height: 13vh;
   box-shadow: 0px 0px 8px 2px grey;
   display: flex;
   flex-direction: column;
