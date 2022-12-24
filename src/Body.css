@@ -1,3 +1,16 @@
 .Body {
     min-height: 100vh;
+    background-color: #F3E9DC;
+}
+@font-face {
+    font-family: thicker;
+    src: local("Oliver-Font"), url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+    font-weight: 700;
+}
+.thick {
+    font-family: thicker;
+    font-size: 5em;
+    background-color: #F3E9DC;
+    margin: 0;
+    color: #444346;
 }

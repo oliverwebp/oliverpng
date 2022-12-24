@@ -22,7 +22,7 @@ function Footer() {
                     <p className='copyright'>	&#169;</p>
                 </li>
                 <li>
-                    <h1>2022 Oliver Nguyen</h1>
+                    <h1>2022 Oliver Nguyen. All Rights Reserved</h1>
                 </li>
             </ul>
         </footer>
