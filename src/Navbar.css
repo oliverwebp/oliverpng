@@ -51,31 +51,11 @@
     }
   }
   
- /* header {
-    height: 11vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition:all 300ms ease-in-out;
-    
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #444346;
-    z-index: 9999;
-    background-color: #DAB49D;
-    filter: drop-shadow(0 -10px 20px rgb(170,170,170))
-    
-  } */
   .active {
     height: 10vh;
     position: fixed;
     top: 0;
     width: 100%;
-   /* transition:all 300ms ease-in-out; */
     
     box-shadow: none;
     display: flex;
@@ -85,11 +65,11 @@
     font-size: calc(10px + 2vmin);
     color: #444346;
     z-index: 9999;
+    opacity: 1;
     background-color: #DAB49D;
     transition: background-color 800ms ease-in-out;
-    
-    filter: drop-shadow(0 -10px 20px rgb(170,170,170));
-    box-shadow: 0 0 8px black;
+    transition: opacity 800ms;
+    filter: drop-shadow(0 -10px 20px black);
     
   }
   .hidden {
@@ -98,7 +78,6 @@
     top: 0;
     width: 100%;
     transition: box-shadow .4s;
-    /*transition:all 300ms ease-in-out; */
     
     box-shadow: none;
     display: flex;
@@ -107,14 +86,14 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: #444346;
-    
-    background-color: transparent;
+    background-color: #DAB49D;
+
     transition: opacity 400ms;
     opacity: 0;
-    transition: background-color 500ms ease-in-out;
-    transition: z-index 0.4s step-end, opacity 0.3s ease-in-out;
+    transition: background-color 1000ms ease-in-out;
+    transition: z-index 0.4s step-end, opacity 0.5s ease-in-out;
     z-index: -1;
-    filter: drop-shadow(0 -10px 20px rgb(170,170,170))
+    filter: drop-shadow(0 -10px 20px black)
   }
   .App-link {
     color: orange;
