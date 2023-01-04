@@ -1,6 +1,9 @@
 .Body {
-    min-height: 100vh;
+    min-height: 400vh;
     background-color: #F3E9DC;
+}
+.top {
+    height: 11vh;
 }
 @font-face {
     font-family: thicker;
