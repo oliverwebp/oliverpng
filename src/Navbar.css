@@ -1,8 +1,8 @@
 
 .App-logo {
-    height: 30px;
+    height: 40px;
     pointer-events: none;
-    margin-top: 1.2em;
+    margin-top: .8em;
     margin-right: 1em;
     
   }
@@ -13,7 +13,7 @@
     max-width: 50%;
     font-size: .5em;
     height: 100%;
-    padding-left: 1%;
+    padding-left: 5%;
     justify-content: left;
     padding-top: 2em;
   }
@@ -22,8 +22,9 @@
     min-width: 7%;
     max-width: 50%;
     height:100%;
-    padding-right: 2%;
+    padding-right: 5%;
     padding-top: 0;
+
   }
   
   .nav-bar {

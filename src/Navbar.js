@@ -16,7 +16,7 @@ class Navbar extends React.Component{
         window.removeEventListener('scroll',this.handleScroll)
     }
     handleScroll = () => {
-        console.log(document.body.getBoundingClientRect())
+        
         this.setState({
             scrollPos:document.body.getBoundingClientRect().top,
             show: document.body.getBoundingClientRect().top > this.state.scrollPos
@@ -25,20 +25,17 @@ class Navbar extends React.Component{
   
     render() {
     return <header className={this.state.show ? 'active' : 'hidden'}>
-        <nav className='Nav-main'>
-          <div className='Left-nav'><img src={penrose} className="App-logo" alt="logo" /> <h2>Oliver Nguyen</h2></div>
-          <div className='Right-nav'>
-            <ol className='nav-bar'>
-              <li>Home</li>
-              <li>About Me</li>
-              <li>Portfolio</li>
-              <li>Contact</li>
-            </ol>
-          </div>
-        </nav>
-   
+            <nav className='Nav-main'>
+                <div className='Left-nav'><img src={penrose} className="App-logo" alt="logo" /> <h2>Oliver Nguyen</h2></div>
+                <div className='Right-nav'>
+                    <ol className='nav-bar'>
+                        <li>Home</li>
+                        <li>About Me</li>
+                        <li>Portfolio</li>
+                    </ol>
+                </div>
+            </nav>
       </header>;
-    
     }
 }
 
