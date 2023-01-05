@@ -26,8 +26,9 @@ class Body extends React.Component {
     render() {
     return <div className='Body'>
             <div className='top'></div>
-            <div className='vertical-left'></div>
-            <div className='vertical-right'></div>
+            
+            <div className={this.state.show ? 'vertical-left' : 'vertical-left-tall'}></div>
+            <div className={this.state.show ? 'vertical-right' : 'vertical-right-tall'}></div>
             <div className='center'>
                 <h1 className='thick'>
                     Hello! I'm Oliver.

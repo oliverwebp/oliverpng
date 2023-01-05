@@ -1,10 +1,12 @@
 .Body {
     min-height: 200vh;
     background-color: #F3E9DC;
+    justify-content: center;
     
 }
 .top {
     height: 25vh;
+    width: 100%;
 
 }
 @font-face {
@@ -28,17 +30,41 @@
 }
 .vertical-left {
     border-left: 2px solid #433e3f;
-    height: 60%;
+    height: 50%;
     position:fixed;
     left: 5%;
     z-index: 5;
     float: left;
+    transition: all 800ms ease-in-out;
+    top:20%;
 }
 .vertical-right {
     border-right: 2px solid #433e3f;
-    height: 60%;
+    height: 50%;
     position: fixed;
     right: 5%;
     z-index: 5;
     float: right;
+    transition: all 800ms ease-in-out;
+    top:20%;
+}
+.vertical-right-tall {
+    transition: all 800ms ease-in-out;
+    top: 15%;
+    border-right: 2px solid #433e3f;
+    height: 70%;
+    position: fixed;
+    right: 5%;
+    z-index: 6;
+    float: right;
+}
+.vertical-left-tall {
+    height: 70%;
+    top: 15%;
+    transition: all 800ms ease-in-out;
+    border-left: 2px solid #433e3f;
+    position:fixed;
+    left: 5%;
+    z-index: 6;
+    float: left;
 }
