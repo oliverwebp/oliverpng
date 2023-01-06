@@ -9,6 +9,7 @@
     font-size:.5em;
     padding-top: .2vh;
     justify-content: space-between;
+    width: 100%;
 }
 
 .outside {

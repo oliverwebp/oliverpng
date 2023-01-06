@@ -2,6 +2,7 @@
     min-height: 200vh;
     background-color: #F3E9DC;
     justify-content: center;
+    width: 100%;
     
 }
 .top {
@@ -20,12 +21,12 @@
 }
 .thick {
     font-family: thicker;
-    font-size: 5em;
+    font-size: 7vmin;
     background-color: #F3E9DC;
-    margin: 0;
-    padding: 1em;
-    padding-top: .5em;
-    padding-left: 2.5em;
+    margin: 0%;
+    
+    
+    margin-left: 15%;
     color: #444346;
 }
 .vertical-left {
@@ -36,7 +37,7 @@
     z-index: 5;
     float: left;
     transition: all 800ms ease-in-out;
-    top:20%;
+    top:25%;
 }
 .vertical-right {
     border-right: 2px solid #433e3f;
@@ -46,7 +47,7 @@
     z-index: 5;
     float: right;
     transition: all 800ms ease-in-out;
-    top:20%;
+    top:25%;
 }
 .vertical-right-tall {
     transition: all 800ms ease-in-out;

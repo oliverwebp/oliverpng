@@ -26,13 +26,14 @@ class Navbar extends React.Component{
     render() {
     return <header className={this.state.show ? 'active' : 'hidden'}>
             <nav className='Nav-main'>
-                <div className='Left-nav'><img src={penrose} className="App-logo" alt="logo" /> <h2>Oliver Nguyen</h2></div>
+                <div className='Left-nav'>
+                    <img src={penrose} className="App-logo" alt="logo" />
+                    <h2>Oliver Nguyen</h2>
+                </div>
                 <div className='Right-nav'>
-                    <ol className='nav-bar'>
-                        <li>Home</li>
-                        <li>About Me</li>
-                        <li>Portfolio</li>
-                    </ol>
+                     <p>Home</p>
+                     <p>About Me</p>
+                     <p>Portfolio</p>
                 </div>
             </nav>
       </header>;

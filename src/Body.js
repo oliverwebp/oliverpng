@@ -16,7 +16,6 @@ class Body extends React.Component {
         window.removeEventListener('scroll',this.handleScroll)
     }
     handleScroll = () => {
-        console.log(document.body.getBoundingClientRect())
         this.setState({
             scrollPos:document.body.getBoundingClientRect().top,
             show: document.body.getBoundingClientRect().top > this.state.scrollPos
