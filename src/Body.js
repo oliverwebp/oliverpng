@@ -33,6 +33,14 @@ class Body extends React.Component {
                     Hello! I'm Oliver.
                 </h1>
             </div>
+            {/*
+            <div className='txt'>
+                <ul>
+                    <li>Undergraduate student at University of Washington Bothell</li>
+                    <li>Born and raised in Seattle, Washington</li>
+                </ul>
+            </div>
+    */}
         </div>
     }
     

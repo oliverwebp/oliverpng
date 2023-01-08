@@ -7,8 +7,8 @@ import React from 'react';
 function App() {
   
   return (
-    <div>
-      <Navbar/>
+    <div className='poggywoggy'>
+      <Navbar className="navy"/>
       <Body/>
       <Footer/>
     </div>
