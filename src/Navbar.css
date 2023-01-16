@@ -32,6 +32,30 @@
     font-size: 2.5vmin;
 
   }
+  .mobile-right {
+    display: none;
+  }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+ .mobile-right {
+  
+    height: 100%;
+    max-width: 50%;
+    padding-right: 5%;
+    display:flex;
+    align-items: center;
+ }
+
+ .menuIMG {
+  width: 5vmin;
+ }
+ .Right-nav {
+  display: none;
+ }
+}
+
+
   .Nav-main {
     display: flex;
     justify-content: space-between;

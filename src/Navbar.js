@@ -1,6 +1,7 @@
 import penrose from './penrose.png'
 import './Navbar.css';
 import React from 'react';
+import menuSVG from './menu_FILL0_wght400_GRAD0_opsz48.svg';
 class Navbar extends React.Component{
     constructor() {
         super();
@@ -34,6 +35,9 @@ class Navbar extends React.Component{
                      <p>Home</p>
                      <p>About Me</p>
                      <p>Portfolio</p>
+                </div>
+                <div className='mobile-right'>
+                    <img src={menuSVG} className="menuIMG" alt='menu button'/>
                 </div>
             </nav>
       </header>;
