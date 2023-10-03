@@ -25,7 +25,7 @@ class Navbar extends React.Component{
     }
   
     render() {
-    return <header className={this.state.show ? 'active' : 'hidden'}>
+    return <header className='active'>
             <nav className='Nav-main'>
                 <div className='Left-nav'>
                     <img src={penrose} className="App-logo" alt="logo" />
