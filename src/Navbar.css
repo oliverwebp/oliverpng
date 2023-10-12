@@ -1,10 +1,4 @@
 
-.App-logo {
-    height: 5vmin;
-    pointer-events: none;
-   
-    
-  }
   
   .Left-nav {
     min-width: 25%;
@@ -16,21 +10,26 @@
     margin-left: 5%;
     align-items: center;
     justify-content: left;
-    mix-blend-mode:difference;
     
   }
   
+  .Font-Reverse {
+    color: #dddde1;
+    mix-blend-mode: difference;
+  }
   .Right-nav {
     min-width: 25%;
     max-width: 60%;
     height:100%;
     padding-right: 2%;
     padding-top: 0;
-    overflow: scroll;
+    overflow: none;
     display: flex;
     align-items: center;
     gap: 15%;
     font-size: 2.5vmin;
+    color: #dddde1;
+    mix-blend-mode: difference;
 
   }
   .mobile-right {
@@ -74,10 +73,10 @@
   
   .active {
     height: 10vh;
+    overscroll-behavior:none;
     position: fixed;
-    top: 0;
+   
     width: 100%;
-    color: #dddde1;
     mix-blend-mode: difference;
 
     box-shadow: none;
@@ -134,4 +133,8 @@
     }
   }
  
-  
+  .App-logo {
+    height: 5vmin;
+    pointer-events: none;
+    
+  }

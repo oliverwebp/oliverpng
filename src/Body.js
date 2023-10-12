@@ -1,14 +1,19 @@
 import './Body.css';
 import React from 'react';
-import Horse from './horse.jpeg'
+import TimePT from './TimePT.js'
+
 
 class Body extends React.Component {
+    
     constructor() {
+  
         super();
         this.state = {
             show:true,
             scrollPos: 0
         }
+
+
     }
     componentDidMount() {
         window.addEventListener('scroll',this.handleScroll)
@@ -23,6 +28,7 @@ class Body extends React.Component {
         })
     }
   
+    // <img src={Horse} alt='Horse' className='mainphoto'></img>
     render() {
     return <div className='Body'>
             <div className='top'></div>
@@ -36,8 +42,9 @@ class Body extends React.Component {
                 <h1 className='thick'>
                     Hello! I'm Oliver.
                 </h1>
-                <img src={Horse} alt='Horse' className='mainphoto'></img>
+                <TimePT/>
             </div>
+
             
             <div className='txt'>
                 <hr className='fullhr'></hr>
@@ -46,8 +53,8 @@ class Body extends React.Component {
                     <li>Born and raised in Seattle, Washington</li>
                 </ul>
             </div>
-    
         </div>
+        
     }
     
 }

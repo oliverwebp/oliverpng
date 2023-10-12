@@ -1,0 +1,16 @@
+ex {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color:black;
+    text-align: center;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position:absolute;
+}
+.Aop {
+    height: 100vh;
+    width: 100vw;
+}

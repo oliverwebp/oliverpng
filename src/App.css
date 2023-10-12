@@ -7,9 +7,11 @@
   background-color: #e1dfdd;
   box-sizing: border-box;
   display: grid;
-  height: 225vh;
+  overflow: hidden;
+  max-height: 310vh;
+  overscroll-behavior:none;
   grid-template-columns: 100%;
-  grid-template-rows: [row1-start] 10vh [row1-end] 200vh [third-line] 10vh [last-line];
+  grid-template-rows: [row1-start] 10vh [row1-end] 200vh [third-line] 100vh [last-line];
   grid-template-areas: 
   "Navbar"
   "Body"
@@ -25,6 +27,7 @@
 
 Body {
   grid-area: Body;
+  overscroll-behavior: none;
   grid-row-start: row1-end;
   grid-row-end: 3;
 }
