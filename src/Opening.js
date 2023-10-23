@@ -15,6 +15,8 @@ export default function Opening() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return <div className='Aop'>
+        <p>Oliver Nguyen</p>
+        <p>Portfolio</p>
         <motion.ex 
             initial={{ opacity: 0 }}
             animate={{opacity:1}}>

@@ -42,7 +42,11 @@ class Body extends React.Component {
                 <h1 className='thick'>
                     Hello! I'm Oliver.
                 </h1>
-                <TimePT/>
+                <div className='TZ'>
+                    <p>My local time&nbsp;</p>
+                    <TimePT/>
+                </div>
+                <p>(GMT -7)</p>
             </div>
 
             

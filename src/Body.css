@@ -21,6 +21,9 @@
    
 
 }
+.TZ {
+    display: flex;
+}
 @font-face {
     font-family: thicker;
     src: local("Oliver-Font"), url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
@@ -29,6 +32,9 @@
 .center {
     grid-area: center;
     width: 100%;
+}
+.center p {
+    margin: 0;
 }
 .thick {
     font-family: thicker;
