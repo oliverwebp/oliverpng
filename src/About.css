@@ -1,0 +1,40 @@
+.About {
+    min-height: 200vh;
+    background-color: #e1dfdd;
+    justify-content: center;
+    
+
+    box-sizing: border-box;
+    overscroll-behavior:none;
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+    grid-template-rows: 1fr 3fr 5fr;
+    grid-template-areas: 
+    "left top right"
+    "left center right"
+    "left txt right"
+}
+.left {
+    align-items: center;
+    justify-content: center;
+}
+.right {
+    align-items: center;
+    justify-content: center;
+}
+
+.top {
+    height: 25vh;
+   
+
+}
+
+.center {
+    grid-area: center;
+    width: 100%;
+}
+
+.txt {
+  
+    grid-area: txt;
+}

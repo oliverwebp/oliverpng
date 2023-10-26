@@ -1,12 +1,8 @@
-import './App.css';
-import Footer from './Footer.js';
-import Body from './Body';
-import Navbar from './Navbar';
-import About from './About';
+import Home from './Home';
 import Opening from './Opening';
 import React, { useEffect, useState, } from 'react';
-import {Routes, Route} from 'react-router-dom';
-
+import './App.css'
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const [Op, setOp] = useState(false);
@@ -19,21 +15,16 @@ function App() {
   }, [])
   
   return (
-    <div>
-      {
-        Op ? 
-          <Opening/> :
-          <div className='poggywoggy'>
-            <Navbar className="navy"/>
-            <Routes>
-              <Route path='/' element={<Body/>}/>
-              <Route path='/About' element={<About/>}/>
-            </Routes>
-            <Footer/>
-            
-         </div>
-      }
-    </div>
+    <AnimatePresence mode='wait'>
+        <div>
+        {
+          
+          Op ? 
+            <Opening/> :
+            <Home/>
+        }
+      </div>
+    </AnimatePresence>
   );
 }
 export default App;

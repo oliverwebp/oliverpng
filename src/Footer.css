@@ -12,6 +12,7 @@
     box-sizing: inherit;
     position: relative;
     bottom: 0;
+    z-index: 4;
 
 }
 .hover-underline-animationF {

@@ -12,5 +12,6 @@ ex {
 }
 .Aop {
     height: 100vh;
+    overflow: none;
     width: 100vw;
 }

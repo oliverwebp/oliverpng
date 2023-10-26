@@ -44,7 +44,7 @@
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  font-size: 2.2vmin;
+  font-size: 2.5vmin;
   text-decoration:none; 
   color: #dddde1;
   font-weight: 500;
@@ -119,7 +119,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    z-index: 9999;
+    z-index: 9;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 800ms ease-in-out;
@@ -149,7 +149,7 @@
     opacity: 0;
     transition: background-color 1000ms ease-in-out;
     transition: z-index 0.4s step-end, opacity 0.5s ease-in-out;
-    z-index: -1;
+    z-index: 5;
     /*filter: drop-shadow(0 -10px 20px black); */
     box-sizing: inherit;
 
