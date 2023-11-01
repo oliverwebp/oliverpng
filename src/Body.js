@@ -34,6 +34,7 @@ class Body extends React.Component {
     
   
     render() {
+  
         const container = {
             hidden: { opacity: 0 },
             show: {
@@ -87,6 +88,12 @@ class Body extends React.Component {
                         <li>Undergraduate student at University of Washington Bothell</li>
                         <li>Born and raised in Seattle, Washington</li>
                     </ul>
+
+
+                 
+
+
+
                 </div>
             </motion.div>
             <Footer/>

@@ -11,7 +11,7 @@ ex {
     position:absolute;
 }
 .Aop {
-    height: 100vh;
+    height: 100%;
     overflow: none;
-    width: 100vw;
+    width: 100%;
 }
