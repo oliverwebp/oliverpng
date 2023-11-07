@@ -5,26 +5,42 @@
   box-sizing: border-box;
   overscroll-behavior:none;
   display: grid;
-  grid-template-columns: 5fr 8fr 5fr;
+  grid-template-columns: 2fr 6fr 4fr 6fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: 
-  "Left-nav middle-nav Right-nav"
-
+  "Left-navS Left-navG middle-nav Right-nav scroller"
 }
 
-.Left-nav {
+.Left-navS {
   display: flex;
-  gap: 5%;
   font-size: 1.8vmin;
   height: 100%;
-  margin-left: 10%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+
+}
+.Left-navG {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
   align-items: center;
   justify-content: left;
-  
+
+  padding: auto;  
 }
-
 .middle-nav {
-
+  width: 100%;
+  align-items: center;
+  padding: auto;
+  font-size: 2vmin;
+  display: flex;
+  color: #dddde1;
+}
+.middle-nav a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .Right-nav {
@@ -35,6 +51,7 @@
   gap: 10%;
   font-size: 2.5vmin;
   color: #dddde1;
+  justify-content: right;
 }
 
 .Right-nav a {
@@ -115,12 +132,13 @@
     position: absolute;
 }
 .drawing {
-  padding-bottom: 1em;
-
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -10%);
 }
-
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
  .mobile-right {
   
     height: 100%;
@@ -138,4 +156,30 @@
   mix-blend-mode: difference;
 
  }
+}
+
+.scroller {
+  justify-content: right;
+  position: relative;
+  margin: auto;
+}
+
+#progress {
+  position: relative;
+  transform: rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+}
+
+.bg {
+  stroke: #dddde1;
+  opacity: 0.3;
+}
+
+#progress .indicator {
+  stroke: #dddde1;
 }

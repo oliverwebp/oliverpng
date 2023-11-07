@@ -1,18 +1,19 @@
 import penrose from './penrose.png'
 import './Navbar.css';
-import React from 'react';
+import {React} from 'react';
+import TimePT from './TimePT';
 import {Link} from 'react-router-dom'
-import {motion} from 'framer-motion'
+import {motion, useScroll} from 'framer-motion'
 
 
-import menuSVG from './menu_FILL0_wght400_GRAD0_opsz48.svg';
+
+
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
   visible
 };
-
 const fillin = {
   hidden: {opacity: 0, fill: 'none'},
   visibleA: (i) => {
@@ -27,6 +28,8 @@ const fillin = {
      };
   }
 };
+
+
 const draw = {
   hidden: { pathLength: 0, opacity: 0, fill: 'none'},
   visible: (i) => {
@@ -45,20 +48,22 @@ const draw = {
 };
 
 
-export function Navbar() {
-    
-  
-    
+export default function Navbar() {
+
+  const { scrollYProgress } = useScroll();
+
 return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}} variants={{visible: {transition: { staggerChildren:0.3}}}}>
     <header className='active'>
             <nav className='Nav-main'>
-                <div className='Left-nav'>
-                    <motion.a variants={{hidden: { opacity: 0, y: -20 },visible}}>
+                <div className='Left-navS'>
+                    <motion.a variants={itemVariants}>
                       <img src={penrose} className="App-logo" alt="logo" />
                     </motion.a>
-                    <div className='drawing'>
+                </div>
+                <motion.div variants={itemVariants} className='left-navG'>
+                <div className='drawing'>
                       <div className='stroke'>
-                        <motion.svg  initial="hidden" whileInView="visible" width="193" height="29" viewBox="0 0 200 29" xmlns="http://www.w3.org/2000/svg">  
+                        <motion.svg  initial="hidden" animate="visible" width="193" height="29" viewBox="0 0 200 29" xmlns="http://www.w3.org/2000/svg">  
                           <motion.path variants={draw} custom={2.5} stroke="#dddde1"  d="M192.803 22H191.303V13.3C191.303 11.3 191.013 9.84 190.433 8.92C189.873 7.98001 188.973 7.51 187.733 7.51C186.853 7.51 185.983 7.72001 185.123 8.14001C184.283 8.56001 183.543 9.14 182.903 9.88C182.283 10.6 181.833 11.42 181.553 12.34V22H180.053V6.4H181.463V10.12C181.883 9.32 182.443 8.63001 183.143 8.05C183.843 7.45 184.623 6.98 185.483 6.64001C186.343 6.3 187.233 6.13 188.153 6.13C189.013 6.13 189.733 6.29 190.313 6.61001C190.913 6.91001 191.393 7.35 191.753 7.93001C192.133 8.51 192.403 9.23001 192.563 10.09C192.723 10.95 192.803 11.93 192.803 13.03V22Z" fill="white"/>
                           <motion.path variants={draw} custom={2} stroke="#dddde1"  d="M169.193 22.3C168.093 22.3 167.073 22.09 166.133 21.67C165.193 21.23 164.373 20.64 163.673 19.9C162.993 19.14 162.453 18.27 162.053 17.29C161.673 16.29 161.483 15.24 161.483 14.14C161.483 12.66 161.813 11.32 162.473 10.12C163.133 8.92 164.043 7.96001 165.203 7.24001C166.363 6.5 167.663 6.13 169.103 6.13C170.583 6.13 171.893 6.5 173.033 7.24001C174.173 7.98001 175.073 8.96 175.733 10.18C176.413 11.38 176.753 12.7 176.753 14.14C176.753 14.26 176.753 14.38 176.753 14.5C176.753 14.62 176.743 14.72 176.723 14.8H163.043C163.123 15.98 163.453 17.05 164.033 18.01C164.613 18.97 165.353 19.73 166.253 20.29C167.173 20.83 168.173 21.1 169.253 21.1C170.333 21.1 171.353 20.82 172.313 20.26C173.273 19.7 173.943 18.98 174.323 18.1L175.643 18.46C175.343 19.2 174.863 19.86 174.203 20.44C173.563 21.02 172.803 21.48 171.923 21.82C171.063 22.14 170.153 22.3 169.193 22.3ZM162.983 13.63H175.313C175.233 12.41 174.913 11.33 174.353 10.39C173.793 9.45001 173.053 8.71001 172.133 8.17C171.233 7.63 170.233 7.36 169.133 7.36C168.033 7.36 167.033 7.63 166.133 8.17C165.233 8.71001 164.503 9.45001 163.943 10.39C163.383 11.33 163.063 12.41 162.983 13.63Z" fill="white"/>
                           <motion.path variants={draw} custom={1.5} stroke="#dddde1"  d="M147.939 27.28C148.259 27.3 148.539 27.3 148.779 27.28C149.039 27.28 149.229 27.24 149.349 27.16C149.529 27.1 149.709 26.94 149.889 26.68C150.089 26.44 150.349 25.95 150.669 25.21C150.989 24.49 151.439 23.42 152.019 22L145.059 6.39999H146.649L152.829 20.41L158.559 6.39999H160.089L151.539 26.92C151.419 27.24 151.249 27.52 151.029 27.76C150.829 28.02 150.579 28.22 150.279 28.36C149.979 28.52 149.619 28.61 149.199 28.63C149.019 28.65 148.829 28.66 148.629 28.66C148.429 28.68 148.199 28.68 147.939 28.66V27.28Z" fill="white"/>
@@ -74,7 +79,7 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                         </motion.svg>
                       </div>
                       <div className='Afill'>
-                        <motion.svg  initial="hidden" whileInView="visibleA" width="193" height="29" viewBox="0 0 200 29" xmlns="http://www.w3.org/2000/svg">
+                        <motion.svg  initial="hidden" animate="visibleA" width="193" height="29" viewBox="0 0 200 29" xmlns="http://www.w3.org/2000/svg">
                           <motion.path variants={fillin} custom={2.5} d="M192.803 22H191.303V13.3C191.303 11.3 191.013 9.84 190.433 8.92C189.873 7.98001 188.973 7.51 187.733 7.51C186.853 7.51 185.983 7.72001 185.123 8.14001C184.283 8.56001 183.543 9.14 182.903 9.88C182.283 10.6 181.833 11.42 181.553 12.34V22H180.053V6.4H181.463V10.12C181.883 9.32 182.443 8.63001 183.143 8.05C183.843 7.45 184.623 6.98 185.483 6.64001C186.343 6.3 187.233 6.13 188.153 6.13C189.013 6.13 189.733 6.29 190.313 6.61001C190.913 6.91001 191.393 7.35 191.753 7.93001C192.133 8.51 192.403 9.23001 192.563 10.09C192.723 10.95 192.803 11.93 192.803 13.03V22Z" fill="white"/>
                           <motion.path variants={fillin} custom={2} d="M169.193 22.3C168.093 22.3 167.073 22.09 166.133 21.67C165.193 21.23 164.373 20.64 163.673 19.9C162.993 19.14 162.453 18.27 162.053 17.29C161.673 16.29 161.483 15.24 161.483 14.14C161.483 12.66 161.813 11.32 162.473 10.12C163.133 8.92 164.043 7.96001 165.203 7.24001C166.363 6.5 167.663 6.13 169.103 6.13C170.583 6.13 171.893 6.5 173.033 7.24001C174.173 7.98001 175.073 8.96 175.733 10.18C176.413 11.38 176.753 12.7 176.753 14.14C176.753 14.26 176.753 14.38 176.753 14.5C176.753 14.62 176.743 14.72 176.723 14.8H163.043C163.123 15.98 163.453 17.05 164.033 18.01C164.613 18.97 165.353 19.73 166.253 20.29C167.173 20.83 168.173 21.1 169.253 21.1C170.333 21.1 171.353 20.82 172.313 20.26C173.273 19.7 173.943 18.98 174.323 18.1L175.643 18.46C175.343 19.2 174.863 19.86 174.203 20.44C173.563 21.02 172.803 21.48 171.923 21.82C171.063 22.14 170.153 22.3 169.193 22.3ZM162.983 13.63H175.313C175.233 12.41 174.913 11.33 174.353 10.39C173.793 9.45001 173.053 8.71001 172.133 8.17C171.233 7.63 170.233 7.36 169.133 7.36C168.033 7.36 167.033 7.63 166.133 8.17C165.233 8.71001 164.503 9.45001 163.943 10.39C163.383 11.33 163.063 12.41 162.983 13.63Z" fill="white"/>
                           <motion.path variants={fillin} custom={1.5} d="M147.939 27.28C148.259 27.3 148.539 27.3 148.779 27.28C149.039 27.28 149.229 27.24 149.349 27.16C149.529 27.1 149.709 26.94 149.889 26.68C150.089 26.44 150.349 25.95 150.669 25.21C150.989 24.49 151.439 23.42 152.019 22L145.059 6.39999H146.649L152.829 20.41L158.559 6.39999H160.089L151.539 26.92C151.419 27.24 151.249 27.52 151.029 27.76C150.829 28.02 150.579 28.22 150.279 28.36C149.979 28.52 149.619 28.61 149.199 28.63C149.019 28.65 148.829 28.66 148.629 28.66C148.429 28.68 148.199 28.68 147.939 28.66V27.28Z" fill="white"/>
@@ -90,8 +95,13 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                         </motion.svg>
                       </div>
                   </div>
+                </motion.div>
+                <div className='middle-nav'>
+                  <motion.a variants={itemVariants}>
+                    <p>Seattle, US &nbsp;</p>
+                    <TimePT/>
+                  </motion.a>
                 </div>
-                <div className='middle-nav'></div>
                 <div className='Right-nav'>
                     <motion.a variants={itemVariants}>
                     <Link className='hover-underline-animation' to='/'>Home</Link>
@@ -103,13 +113,22 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                      <p>Portfolio</p>
                      </motion.a>
                 </div>
-                <div className='mobile-right'>
-                    <img src={menuSVG} className="menuIMG" alt='menu button'/>
-                </div>
+                <motion.div variants={itemVariants} className='scroller'>
+                  <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="20" pathLength="1" className="bg" />
+                    <motion.circle
+                      cx="50"
+                      cy="50"
+                      r="20"
+                      pathLength="1"
+                      className="indicator"
+                      style={{ pathLength: scrollYProgress }}
+                    />
+                  </svg>
+                </motion.div>
             </nav>
       </header>;
       </motion.article>
     }
 
 
-export default Navbar;

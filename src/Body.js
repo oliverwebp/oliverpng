@@ -1,6 +1,5 @@
 import './Body.css';
 import React from 'react';
-import TimePT from './TimePT.js'
 import transition from './transition';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
@@ -11,7 +10,7 @@ class Body extends React.Component {
     
     
     constructor() {
-  
+
         super();
         this.state = {
             show:true,
@@ -34,7 +33,7 @@ class Body extends React.Component {
     
   
     render() {
-  
+
         const container = {
             hidden: { opacity: 0 },
             show: {
@@ -55,13 +54,18 @@ class Body extends React.Component {
 
     return <>
     <Navbar className="navy"/>
-        <motion.div variants={container} initial="hidden"
-    animate="show" className='Body'>
-                <div className='top'></div>
+        <motion.div variants={container} initial="hidden" animate="show" className='Body'>
+            <div className='left'>         
+               <div className={this.state.show ? 'vertical-left' : 'vertical-left-tall'}></div>
+           </div>
+                <div className='topL'>
+                <motion.div variants={item} className='thick'>
+                        Hello! I'm Oliver.
+                    </motion.div>
+                </div>
                 
-                <div className='left'> 
-               
-                    <div className={this.state.show ? 'vertical-left' : 'vertical-left-tall'}></div>
+                <div className='topR'>
+
                 </div>
                 
                 <div className='right'>
@@ -69,31 +73,26 @@ class Body extends React.Component {
                     <div className={this.state.show ? 'vertical-right' : 'vertical-right-tall'}></div>
                     
                 </div>
-                <div className='center'>
-                    <motion.div variants={item} className='thick'>
-                        Hello! I'm Oliver.
-                    </motion.div>
-                    <motion.div variants={item}>
-                        <div className='TZ'>
-                            <p>My local time&nbsp;</p>
-                            <TimePT/>
-                        </div>
-                        <p>(GMT -7)</p>
-                    </motion.div>
+                <div className='centerL'>
+                    <h1>1.</h1>
+                    <h1>2.</h1>
+                    <h1>3.</h1>
+                    <h1>4.</h1>
+                </div>
+                <div className='centerR'>
+
                 </div>
                 
-                <div className='txt'>
+                <div className='txtL'>
                     <hr className='fullhr'></hr>
-                    <ul className='ind'>
+                    <ul>
                         <li>Undergraduate student at University of Washington Bothell</li>
                         <li>Born and raised in Seattle, Washington</li>
                     </ul>
+                </div>
 
-
-                 
-
-
-
+                <div className='txtR'>
+                    <hr className='fullhr'></hr>
                 </div>
             </motion.div>
             <Footer/>

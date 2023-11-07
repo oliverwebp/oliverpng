@@ -25,10 +25,10 @@
   box-sizing: border-box;
   display: grid;
   overflow: hidden;
-  max-height: 310vh;
+  max-height: 2000vh;
   overscroll-behavior:none;
   grid-template-columns: 100%;
-  grid-template-rows: [row1-start] 10vh [row1-end] 200vh [third-line] 100vh [last-line];
+  grid-template-rows: [row1-start] 10vh [row1-end] 600vh [third-line] 100vh [last-line];
   grid-template-areas: 
   "Navbar"
   "Body"

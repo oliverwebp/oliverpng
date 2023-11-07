@@ -1,5 +1,5 @@
 .About {
-    min-height: 200vh;
+    min-height: 300vh;
     background-color: #e1dfdd;
     justify-content: center;
     
@@ -7,12 +7,13 @@
     box-sizing: border-box;
     overscroll-behavior:none;
     display: grid;
-    grid-template-columns: 1fr 15fr 1fr;
-    grid-template-rows: 1fr 3fr 5fr;
+    grid-template-columns: 2fr 8fr 8fr 2fr;
+    grid-template-rows: 1fr 3fr 5fr 5fr;
     grid-template-areas: 
-    "left top right"
-    "left center right"
-    "left txt right"
+    "left topL topR right"
+    "left centerL centerR right"
+    "left txtL txtR right"
+    "paral paral paral paral"
 }
 .left {
     align-items: center;
@@ -23,18 +24,34 @@
     justify-content: center;
 }
 
-.top {
+.topL {
     height: 25vh;
    
 
 }
 
-.center {
+.centerL {
     grid-area: center;
     width: 100%;
 }
+.centerR {
+    overflow: hidden;
+}
 
-.txt {
+.txtL {
+    overflow: hidden;
   
-    grid-area: txt;
+    grid-area: txtL;
+}
+.txtR {
+    overflow: hidden;
+}
+.paral {
+    grid-area: paral;
+}
+.paral a {
+    z-index: 100;
+    color: black;
+    position: relative;
+    text-decoration: none;
 }
