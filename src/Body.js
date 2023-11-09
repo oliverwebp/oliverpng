@@ -60,7 +60,7 @@ class Body extends React.Component {
            </div>
                 <div className='topL'>
                 <motion.div variants={item} className='thick'>
-                        Hello! I'm Oliver.
+                        Hello! I&apos;m Oliver.
                     </motion.div>
                 </div>
                 

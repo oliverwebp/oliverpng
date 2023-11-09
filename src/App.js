@@ -1,5 +1,5 @@
 import Home from './Home';
-import Opening from './Opening';
+import Opening from './Opening'
 import React, { useEffect, useState, } from 'react';
 import './App.css'
 import { AnimatePresence } from 'framer-motion';
@@ -20,7 +20,7 @@ function App() {
         {
           
           Op ? 
-            <Opening/> :
+            <Opening/>:
             <Home/>
         }
       </div>

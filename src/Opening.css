@@ -1,17 +1,40 @@
-ex {
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color:black;
-    text-align: center;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.box {
+    width: 200px;
+    height: 4em;
+    background-color: white;
+    top:  0%;
+    left: 70%;
     position:absolute;
+    overflow: hidden;
+
 }
-.Aop {
+
+.bgop {
+    background-color: white;
     height: 100%;
-    overflow: none;
     width: 100%;
+    overflow: hidden;
+    
+}
+
+.colorfloor {
+    color: black;
+    text-align: right;
+    font-size: 4em;
+    top: 0;
+    font-weight: 700;
+    margin: 0;
+}
+.nom {
+    font-size: 7em;
+    font-weight: 500;
+    margin: 0;
+}
+.nom p {
+    margin: 0;
+}
+.pnom {
+    font-size: 5em;
+    font-weight: 400;
+    margin: 0;
 }

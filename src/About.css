@@ -8,12 +8,18 @@
     overscroll-behavior:none;
     display: grid;
     grid-template-columns: 2fr 8fr 8fr 2fr;
-    grid-template-rows: 1fr 3fr 5fr 5fr;
+    grid-template-rows: 1fr 3fr 5fr .5fr 3fr .5fr 3fr .5fr 3fr;
     grid-template-areas: 
     "left topL topR right"
     "left centerL centerR right"
     "left txtL txtR right"
+    "left al1 al2 right" 
     "paral paral paral paral"
+    ". an1 an2 ."
+    "paral1 paral1 paral1 paral1"
+    ". hi1 hi2 ."
+    "paral2 paral2 paral2 paral2"
+
 }
 .left {
     align-items: center;
@@ -54,4 +60,93 @@
     color: black;
     position: relative;
     text-decoration: none;
+}
+.music {
+    display: flex;
+    font-size: 1.5em;
+}
+.al1 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    grid-area: al1;
+    color: black;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.al1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+.al2 {
+grid-area: al2;
+}
+
+.blockm {
+    bottom: 2em;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    font-size: 1.5vmin;
+    text-decoration:none; 
+    color: black;
+    font-weight: 500;
+    border-bottom: solid 1px;
+    border-top:solid 1px;
+}
+.blockm p {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+}
+.blockm span {
+    margin: auto;
+    margin-right: 0;
+}
+.an1 {
+    grid-area: an1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: black;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.an1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+.an2 {
+    grid-area: an2;
+}
+.paral1 {
+    grid-area: paral1;
+}
+.paral2 {
+    grid-area: paral2;
+}
+.hi1 {
+    grid-area: hi1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: black;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.hi1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+.hi2 {
+    grid-area: hi2;
 }
