@@ -57,7 +57,7 @@
 }
 .paral a {
     z-index: 100;
-    color: black;
+    color: #4D4D4D;
     position: relative;
     text-decoration: none;
 }
@@ -70,7 +70,7 @@
     height: 100%;
     display: block;
     grid-area: al1;
-    color: black;
+    color: #4D4D4D;
     position: relative;
     z-index: 4;
     margin: auto;
@@ -79,7 +79,13 @@
 .al1 a {
     text-decoration: none;
     color: black;
+    opacity: .4;
     font-size: 1em;
+}
+.al1 a:hover {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    color: black;
 }
 .al2 {
 grid-area: al2;
@@ -92,7 +98,7 @@ grid-area: al2;
     position: absolute;
     font-size: 1.5vmin;
     text-decoration:none; 
-    color: black;
+    color: #4D4D4D;
     font-weight: 500;
     border-bottom: solid 1px;
     border-top:solid 1px;
@@ -111,7 +117,7 @@ grid-area: al2;
     width: 100%;
     height: 100%;
     display: block;
-    color: black;
+    color: #4D4D4D;
     position: relative;
     z-index: 4;
     margin: auto;
@@ -119,11 +125,31 @@ grid-area: al2;
 }
 .an1 a {
     text-decoration: none;
-    color: black;
+    color: #4D4D4D;
     font-size: 1em;
 }
+
 .an2 {
     grid-area: an2;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: black;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.an2 a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    opacity: .4;
+}
+.an2 a:hover {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    color: black;
 }
 .paral1 {
     grid-area: paral1;
@@ -136,7 +162,7 @@ grid-area: al2;
     width: 100%;
     height: 100%;
     display: block;
-    color: black;
+    color: #4D4D4D;
     position: relative;
     z-index: 4;
     margin: auto;
@@ -146,6 +172,12 @@ grid-area: al2;
     text-decoration: none;
     color: black;
     font-size: 1em;
+    opacity: .4;
+}
+.hi1 a:hover {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    color: black;
 }
 .hi2 {
     grid-area: hi2;

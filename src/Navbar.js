@@ -110,6 +110,9 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                     <Link className='hover-underline-animation' to='/About'>About</Link>
                     </motion.a>
                     <motion.a variants={itemVariants}>
+                    <Link className='hover-underline-animation' to='/Contact'>Contact</Link>
+                    </motion.a>
+                    <motion.a variants={itemVariants}>
                      <p>Portfolio</p>
                      </motion.a>
                 </div>

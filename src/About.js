@@ -60,7 +60,9 @@ class About extends React.Component{
                     </a>
                 </div>           
                <div className="al2">
-                
+                    <p>
+                        
+                    </p>
                </div>
                <div className="paral">
                     
@@ -71,13 +73,13 @@ class About extends React.Component{
                     <ParalTextR name1= 'album2'></ParalTextR>
                 </div>
                 <div className="an1">
-                    <a href="https://myanimelist.net/profile/Lukellare"  rel="noreferrer" target="_blank" className="blockm">
+                    
+                </div>
+                <div className="an2">
+                    <a href="https://myanimelist.net/profile/oliverpng"  rel="noreferrer" target="_blank" className="blockm">
                         <p>MyAnimeList</p>
                         <span className="material-symbols-outlined">north_east</span>
                     </a>
-                </div>
-                <div className="an2">
-
                 </div>
                 <div className="paral1">
                     <ParalText name1='anime1'></ParalText>

@@ -87,7 +87,7 @@
     background-color: rgba(0, 0, 0, 0);
     height: 50%;
     position:fixed;
-    z-index: 2;
+    z-index: 5;
     transition: all 800ms ease-in-out;
     top:25%;
 }
@@ -98,7 +98,7 @@
     height: 50%;
     position: fixed;
 
-    z-index: 2;
+    z-index: 5;
 
     transition: all 800ms ease-in-out;
     top:25%;
@@ -112,7 +112,7 @@
     
     height: 70%;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
 
 }
 .vertical-left-tall {
@@ -123,5 +123,5 @@
     transition: all 800ms ease-in-out;
     border-left: 2px solid #dddde1;
     position:fixed;
-    z-index: 2;
+    z-index: 5;
 }
