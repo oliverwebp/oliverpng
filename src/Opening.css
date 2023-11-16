@@ -1,16 +1,24 @@
 .box {
     width: 200px;
     height: 4em;
-    background-color: white;
+    background-color: #e1dfdd;
     top:  0%;
     left: 70%;
     position:absolute;
     overflow: hidden;
 
 }
-
+.downd {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transform-origin: bottom;
+  }
 .bgop {
-    background-color: white;
+    background-color: #e1dfdd;
     height: 100%;
     width: 100%;
     overflow: hidden;

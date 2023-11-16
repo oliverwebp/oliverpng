@@ -48,7 +48,7 @@
   display: flex;
   overflow: none;
   align-items: center;
-  gap: 10%;
+  gap: 5%;
   font-size: 2.5vmin;
   color: #dddde1;
   justify-content: right;
@@ -64,6 +64,15 @@
   font-size: 2.5vmin;
   text-decoration:none; 
   color: #dddde1;
+  font-weight: 500;
+}
+.hover-underline-animation.active {
+  display: inline-block;
+  position: relative;
+  font-size: 2.5vmin;
+  text-decoration:none; 
+  color: #dddde1;
+  height: auto;
   font-weight: 500;
 }
 .hover-underline-animation:after {

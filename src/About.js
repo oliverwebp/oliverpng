@@ -1,8 +1,8 @@
 import React from "react";
-import transition from "./transition";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import './About.css'
+import transition from './transition'
 import ParalText from "./ParalText.tsx";
 import ParalTextR from "./ParalTextR.tsx";
 class About extends React.Component{
@@ -61,7 +61,7 @@ class About extends React.Component{
                 </div>           
                <div className="al2">
                     <p>
-                        
+
                     </p>
                </div>
                <div className="paral">

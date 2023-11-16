@@ -11,7 +11,7 @@ function App() {
     setOp(true)
     setTimeout(()=> {
       setOp(false)
-    }, 5000)
+    }, 6000)
   }, [])
   
   return (

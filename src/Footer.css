@@ -1,6 +1,6 @@
 .MainFooter {
     background: rgb(40,40,40);
-    min-height: 9vh;
+    min-height: 100vh;
     color: white;
     text-align: left;
     justify-content: left;
@@ -69,9 +69,7 @@
   align-items: left;
   justify-content: left;
 }
-.social a {
-  
-}
+
 .social ul {
   list-style-type: none;
   align-items: left;

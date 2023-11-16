@@ -1,9 +1,9 @@
 import './Body.css';
 import React from 'react';
-import transition from './transition';
 import Navbar from './Navbar';
-import { motion } from 'framer-motion';
 import Footer from './Footer';
+import transition from './transition';
+import {motion} from 'framer-motion'
 
 
 class Body extends React.Component {

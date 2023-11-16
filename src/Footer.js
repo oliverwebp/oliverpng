@@ -1,6 +1,7 @@
 import './Footer.css';
 import React from 'react';
 import {Link} from 'react-router-dom'
+import {motion} from 'framer-motion'
 
 
 function Footer() {
@@ -13,22 +14,44 @@ function Footer() {
     const handleMouseLeave = () => {
       setOpacity(0);
     };
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 1,
+            staggerChildren: .5,
+            duration: .5
+          }
+        }
+      }
+      const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+    const item = {
+        hidden: { opacity: 0, y: 10 },
+        visible
+    }
+
+
+    
+
   
     return (
-        <footer className='MainFooter'>
-            <div className='inside'>
-                <div className='dire'>
-                    <h1>Say Hello &#64;</h1>
-                    <h2 className='hover-underline-animationF' onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave} onClick={() => navigator.clipboard.writeText('oliverpngu@gmail.com')} >oliverpngu&#64;gmail.com</h2>
+        <motion.footer className='MainFooter'>
+            <motion.div variants={container} className='inside'>
+                <motion.div initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}} variants={{visible: {transition: { staggerChildren:0.3}}}} className='dire'>
+                    <motion.h1 variants={item}>Say Hello &#64;</motion.h1>
+                    <motion.h2 variants={item} className='hover-underline-animationF' onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave} onClick={() => navigator.clipboard.writeText('oliverpngu@gmail.com')} >oliverpngu&#64;gmail.com</motion.h2>
                     <div className='ctc' style={{opacity}}>Click to Copy</div>
-                </div>
+                </motion.div>
                 <div className='lft'>
                     <ul>
                         <li className='opaqti'>Sitemap</li>
                         <li><br></br></li>
                         <li><Link className='hover-underline-animationF' to='/'>Home</Link></li>
                         <li><Link className='hover-underline-animationF' to='/About'>About</Link></li>
+                        <li><Link className='hover-underline-animationF' to='/Contact'>Contact</Link></li>
                     </ul>
                 </div>
                 <div className='social'>
@@ -48,8 +71,8 @@ function Footer() {
                     by Oliver Nguyen
                     </p>
                 </div>
-            </div>
-        </footer>
+            </motion.div>
+        </motion.footer>
     )
 }
 

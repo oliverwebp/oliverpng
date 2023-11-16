@@ -3,11 +3,19 @@ import React from 'react';
 import {  cubicBezier, motion} from "framer-motion"
 
 
-export default function Opening() {
+ function Opening() {
     const floor1 = Math.floor(Math.random() * (40 - 20) + 20);
     const floor2 = Math.floor(Math.random() * (85-60) + 60);
     return <>
+
     <div className='bgop'>
+    <motion.div
+            className="downd"
+            initial={{opacity:0, scaleY:0, zIndex:20}}
+            animate={{opacity:1,scaleY:[0,1], zIndex:20}}
+            exit={{opacity:1, scaleY:1, zIndex:20}}
+            transition={{delay:5,duration:1, ease: [0.22, 1, 0.36, 1] }}
+        />
         <div className='nom'>
             <p>Oliver Nguyen</p>
         </div>
@@ -45,4 +53,5 @@ export default function Opening() {
     </div>
     </>
 }
+export default Opening
 

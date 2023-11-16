@@ -8,7 +8,7 @@
     overscroll-behavior:none;
     display: grid;
     grid-template-columns: 2fr 8fr 8fr 2fr;
-    grid-template-rows: 1fr 3fr 5fr;
+    grid-template-rows: 2fr 3fr 5fr;
     grid-template-areas: 
     "left topL topR right"
     "left centerL centerR right"
@@ -48,6 +48,7 @@
 .thick {
     font-family: thicker;
     font-size: 7vmin;
+    margin-top: 3em;
     background-color: #e1dfdd;
     color: #000000;
 }

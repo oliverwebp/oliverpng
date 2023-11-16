@@ -2,7 +2,7 @@ import penrose from './penrose.png'
 import './Navbar.css';
 import {React} from 'react';
 import TimePT from './TimePT';
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import {motion, useScroll} from 'framer-motion'
 
 
@@ -61,7 +61,8 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                     </motion.a>
                 </div>
                 <motion.div variants={itemVariants} className='left-navG'>
-                <div className='drawing'>
+                <Link to='/'>
+                  <div className='drawing'>
                       <div className='stroke'>
                         <motion.svg  initial="hidden" animate="visible" width="193" height="29" viewBox="0 0 200 29" xmlns="http://www.w3.org/2000/svg">  
                           <motion.path variants={draw} custom={2.5} stroke="#dddde1"  d="M192.803 22H191.303V13.3C191.303 11.3 191.013 9.84 190.433 8.92C189.873 7.98001 188.973 7.51 187.733 7.51C186.853 7.51 185.983 7.72001 185.123 8.14001C184.283 8.56001 183.543 9.14 182.903 9.88C182.283 10.6 181.833 11.42 181.553 12.34V22H180.053V6.4H181.463V10.12C181.883 9.32 182.443 8.63001 183.143 8.05C183.843 7.45 184.623 6.98 185.483 6.64001C186.343 6.3 187.233 6.13 188.153 6.13C189.013 6.13 189.733 6.29 190.313 6.61001C190.913 6.91001 191.393 7.35 191.753 7.93001C192.133 8.51 192.403 9.23001 192.563 10.09C192.723 10.95 192.803 11.93 192.803 13.03V22Z" fill="white"/>
@@ -95,6 +96,7 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                         </motion.svg>
                       </div>
                   </div>
+                  </Link>
                 </motion.div>
                 <div className='middle-nav'>
                   <motion.a variants={itemVariants}>
@@ -104,16 +106,15 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                 </div>
                 <div className='Right-nav'>
                     <motion.a variants={itemVariants}>
-                    <Link className='hover-underline-animation' to='/'>Home</Link>
+                    <NavLink style={({ isActive }) => ({  
+                            borderBottom: isActive ? 'solid 1px' : 'none' })} className='hover-underline-animation' to='/About'>About</NavLink>
                     </motion.a>
                     <motion.a variants={itemVariants}>
-                    <Link className='hover-underline-animation' to='/About'>About</Link>
+                    <NavLink style={({ isActive }) => ({  
+                            borderBottom: isActive ? 'solid 1px' : 'none' })} className='hover-underline-animation' to='/Contact'>Contact</NavLink>
                     </motion.a>
                     <motion.a variants={itemVariants}>
-                    <Link className='hover-underline-animation' to='/Contact'>Contact</Link>
-                    </motion.a>
-                    <motion.a variants={itemVariants}>
-                     <p>Portfolio</p>
+                     <p>Work</p>
                      </motion.a>
                 </div>
                 <motion.div variants={itemVariants} className='scroller'>
@@ -130,7 +131,7 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                   </svg>
                 </motion.div>
             </nav>
-      </header>;
+      </header> 
       </motion.article>
     }
 
