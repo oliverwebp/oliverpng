@@ -4,6 +4,7 @@ import About from "./About";
 import './Home.css';
 import Contact from "./Contact";
 import Body from "./Body";
+import Work from "./work";
 import { AnimatePresence } from "framer-motion";
 export default function Home() {
     const location = useLocation();
@@ -14,6 +15,7 @@ export default function Home() {
                     <Route path='/*' element={<Body/>}/>
                     <Route path='/About' element={<About/>}/>
                     <Route path='/Contact' element={<Contact/>}/>
+                    <Route path='/Work' element={<Work/>}/>
                 </Routes>
             </AnimatePresence>
             

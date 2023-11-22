@@ -114,7 +114,8 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                             borderBottom: isActive ? 'solid 1px' : 'none' })} className='hover-underline-animation' to='/Contact'>Contact</NavLink>
                     </motion.a>
                     <motion.a variants={itemVariants}>
-                     <p>Work</p>
+                    <NavLink style={({isActive}) => ({
+                      borderBottom: isActive ? 'solid 1px' : 'none'})} className='hover-underline-animation' to='/Work'>Work</NavLink>
                      </motion.a>
                 </div>
                 <motion.div variants={itemVariants} className='scroller'>

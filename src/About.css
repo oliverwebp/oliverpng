@@ -90,12 +90,18 @@
 .al2 {
 grid-area: al2;
 }
+.tomorrow {
+    font-size: large;
+    padding: 2em;
+    padding-bottom: 1em;
+}
 
 .blockm {
     bottom: 2em;
-    width: 100%;
+    width: 60%;
     display: flex;
     position: absolute;
+    padding-left: auto;
     font-size: 1.5vmin;
     text-decoration:none; 
     color: #4D4D4D;

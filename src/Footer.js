@@ -39,7 +39,7 @@ function Footer() {
     return (
         <motion.footer className='MainFooter'>
             <motion.div variants={container} className='inside'>
-                <motion.div initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}} variants={{visible: {transition: { staggerChildren:0.3}}}} className='dire'>
+                <motion.div initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}} variants={{visible: {transition: { staggerChildren:0.5}}}} className='dire'>
                     <motion.h1 variants={item}>Say Hello &#64;</motion.h1>
                     <motion.h2 variants={item} className='hover-underline-animationF' onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave} onClick={() => navigator.clipboard.writeText('oliverpngu@gmail.com')} >oliverpngu&#64;gmail.com</motion.h2>
@@ -52,6 +52,7 @@ function Footer() {
                         <li><Link className='hover-underline-animationF' to='/'>Home</Link></li>
                         <li><Link className='hover-underline-animationF' to='/About'>About</Link></li>
                         <li><Link className='hover-underline-animationF' to='/Contact'>Contact</Link></li>
+                        <li><Link className='hover-underline-animationF' to='/Work'>Work</Link></li>
                     </ul>
                 </div>
                 <div className='social'>
@@ -61,7 +62,7 @@ function Footer() {
                         <li><a href='https://github.com/oliverwebp' target="_blank" rel='noreferrer' className='hover-underline-animationF'>Github</a></li>
                         <li><a href='https://www.linkedin.com/in/oliver-nguyen-74746719b/' rel='noreferrer' target="_blank" className='hover-underline-animationF'>LinkedIn</a></li>
                         <li><a href='https://www.instagram.com/ollie.ngu/' target="_blank" rel='noreferrer' className='hover-underline-animationF'>Instagram</a></li>
-                        <li><a href='https://twitter.com/notliver' target="_blank" rel='noreferrer' className='hover-underline-animationF'>Twitter</a></li>
+                        <li><a href='https://twitter.com/notliver' target="_blank" rel='noreferrer' className='hover-underline-animationF'>Twitter (X)</a></li>
                     </ul>
                 </div>
                 <div className='rft'>

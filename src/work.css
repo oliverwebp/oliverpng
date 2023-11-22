@@ -1,0 +1,49 @@
+.work {
+    min-height: 200vh;
+    background-color: #e1dfdd;
+    justify-content: center;
+    
+
+    box-sizing: border-box;
+    overscroll-behavior:none;
+    display: grid;
+    grid-template-columns: 2fr 8fr 8fr 2fr;
+    grid-template-rows: 2fr 3fr 5fr;
+    grid-template-areas: 
+    "left topL topR right"
+    "left centerL centerR right"
+    "left txtL txtR right"
+}
+
+.left {
+    align-items: center;
+    justify-content: center;
+}
+.right {
+    align-items: center;
+    justify-content: center;
+}
+
+.topL {
+    grid-area: topL;
+}
+
+.topR {
+    grid-area: topR;
+}
+
+.centerL {
+    grid-area: centerL;
+}
+
+.centerR {
+    grid-area: centerR;
+}
+
+.txtL {
+    grid-area: txtL;
+}
+
+.txtR {
+    grid-area: txtR;
+}

@@ -60,8 +60,12 @@ class About extends React.Component{
                     </a>
                 </div>           
                <div className="al2">
-                    <p>
-
+                    <p className="tomorrow">
+                    Music is more than just a source of entertainment or emotional expression.
+                    To me, it's an essential part of my identity, a window into my soul&#8212;shaping and revealing the person I am today.
+                    It would be an understatement to just call it a constant in my life;
+                    In 2022, Spotify Wrapped revealed that I listened to 289,860 minutes of music.
+                    
                     </p>
                </div>
                <div className="paral">
