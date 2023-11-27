@@ -37,7 +37,8 @@ class About extends React.Component{
                    
                    <div className={this.state.show ? 'vertical-left' : 'vertical-left-tall'}></div>
                </div>
-         <div className='topL'></div>
+         <div className='topL'>
+         </div>
          <div className="topR"></div>
                
                <div className='right'>
@@ -65,7 +66,6 @@ class About extends React.Component{
                     To me, it's an essential part of my identity, a window into my soul&#8212;shaping and revealing the person I am today.
                     It would be an understatement to just call it a constant in my life;
                     In 2022, Spotify Wrapped revealed that I listened to 289,860 minutes of music.
-                    
                     </p>
                </div>
                <div className="paral">
@@ -77,7 +77,10 @@ class About extends React.Component{
                     <ParalTextR name1= 'album2'></ParalTextR>
                 </div>
                 <div className="an1">
-                    
+                    <p className="tomorrow">
+                    In the realm of televised entertainment, anime has captivated
+                    my attention with its unique blend of captivating storytelling, expressive art style, and diverse genres.
+                    </p>
                 </div>
                 <div className="an2">
                     <a href="https://myanimelist.net/profile/oliverpng"  rel="noreferrer" target="_blank" className="blockm">
@@ -99,7 +102,11 @@ class About extends React.Component{
                     </a>
                 </div>
                 <div className="hi2">
-
+                    <p className="tomorrow">
+                        Being from the Pacific Northwest, it is only natural I take advantage of the beautiful nature and bountiful trails
+                        that surround the area. Whether it be leasurely walks through the bright sun or strenuous hikes with steep incline under
+                        storming rain, the nature of the Pacific Northwest never ceases to amaze me.
+                    </p>
                 </div>
                 <div className="paral2">
                     <ParalText name1='hike1'></ParalText>

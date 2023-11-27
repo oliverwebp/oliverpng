@@ -37,10 +37,14 @@ class Work extends React.Component {
     return <>
     <Navbar className="navy"/>
         <div className='work'>
-            <div className='left'></div>
+            <div className='left'>
+                <div className={this.state.show ? 'vertical-left' : 'vertical-left-tall'}></div>
+            </div>
             <div className='topL'></div>
             <div className='topR'></div>
-            <div className='right'></div>
+            <div className='right'>
+                <div className={this.state.show ? 'vertical-right' : 'vertical-right-tall'}></div>
+            </div>
             <div className='centerL'></div>
             <div className='centerR'></div>
             <div className='txtL'></div>
