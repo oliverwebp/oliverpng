@@ -8,7 +8,7 @@
     overscroll-behavior:none;
     display: grid;
     grid-template-columns: 2fr 8fr 8fr 2fr;
-    grid-template-rows: 1fr 3fr 5fr .5fr 3fr .5fr 3fr .5fr 3fr;
+    grid-template-rows: 1fr 3fr 5fr .5fr 3fr .5fr 3fr .5fr 3fr auto;
     grid-template-areas: 
     "left topL topR right"
     "left centerL centerR right"
@@ -19,7 +19,13 @@
     "paral1 paral1 paral1 paral1"
     ". hi1 hi2 ."
     "paral2 paral2 paral2 paral2"
+    "cube cube cube cube"
 
+}
+.cube {
+    z-index: 4;
+    grid-area: cube;
+    background-color: white;
 }
 .left {
     align-items: center;

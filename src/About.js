@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import './About.css'
+import Cube from './Cube'
 import transition from './transition'
 import ParalText from "./ParalText.tsx";
 import ParalTextR from "./ParalTextR.tsx";
@@ -65,7 +66,7 @@ class About extends React.Component{
                     Music is more than just a source of entertainment or emotional expression.
                     To me, it's an essential part of my identity, a window into my soul&#8212;shaping and revealing the person I am today.
                     It would be an understatement to just call it a constant in my life;
-                    In 2022, Spotify Wrapped revealed that I listened to 289,860 minutes of music.
+                    In 2023, Spotify Wrapped revealed that I listened to 294,180 minutes of music.
                     </p>
                </div>
                <div className="paral">
@@ -114,6 +115,9 @@ class About extends React.Component{
                         <br></br>
                         <br></br>
                     <ParalTextR name1='hike2'></ParalTextR>
+                </div>
+                <div className="cube">
+                    <Cube></Cube>
                 </div>
 
         </div>
