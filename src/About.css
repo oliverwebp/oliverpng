@@ -1,0 +1,196 @@
+.About {
+    min-height: 300vh;
+    background-color: #e1dfdd;
+    justify-content: center;
+    
+
+    box-sizing: border-box;
+    overscroll-behavior:none;
+    display: grid;
+    grid-template-columns: 2fr 8fr 8fr 2fr;
+    grid-template-rows: 1fr 3fr 5fr .5fr 3fr .5fr 3fr .5fr 3fr auto;
+    grid-template-areas: 
+    "left topL topR right"
+    "left centerL centerR right"
+    "left txtL txtR right"
+    "left al1 al2 right" 
+    "paral paral paral paral"
+    ". an1 an2 ."
+    "paral1 paral1 paral1 paral1"
+    ". hi1 hi2 ."
+    "paral2 paral2 paral2 paral2"
+    "cube cube cube cube"
+
+}
+.cube {
+    z-index: 4;
+    grid-area: cube;
+    background-color: white;
+}
+.left {
+    align-items: center;
+    justify-content: center;
+}
+.right {
+    align-items: center;
+    justify-content: center;
+}
+
+.topL {
+    height: 25vh;
+   
+
+}
+
+.centerL {
+    grid-area: center;
+    width: 100%;
+}
+.centerR {
+    overflow: hidden;
+}
+
+.txtL {
+    overflow: hidden;
+  
+    grid-area: txtL;
+}
+.txtR {
+    overflow: hidden;
+}
+.paral {
+    grid-area: paral;
+}
+.paral a {
+    z-index: 100;
+    color: #4D4D4D;
+    position: relative;
+    text-decoration: none;
+}
+.music {
+    display: flex;
+    font-size: 1.5em;
+}
+.al1 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    grid-area: al1;
+    color: #4D4D4D;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.al1 a {
+    text-decoration: none;
+    color: black;
+    opacity: .4;
+    font-size: 1em;
+}
+.al1 a:hover {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    color: black;
+}
+.al2 {
+grid-area: al2;
+}
+.tomorrow {
+    font-size: large;
+    padding: 2em;
+    padding-bottom: 1em;
+}
+
+.blockm {
+    bottom: 2em;
+    width: 60%;
+    display: flex;
+    position: absolute;
+    padding-left: auto;
+    font-size: 1.5vmin;
+    text-decoration:none; 
+    color: #4D4D4D;
+    font-weight: 500;
+    border-bottom: solid 1px;
+    border-top:solid 1px;
+}
+.blockm p {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+}
+.blockm span {
+    margin: auto;
+    margin-right: 0;
+}
+.an1 {
+    grid-area: an1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #4D4D4D;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.an1 a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-size: 1em;
+}
+
+.an2 {
+    grid-area: an2;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: black;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.an2 a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    opacity: .4;
+}
+.an2 a:hover {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    color: black;
+}
+.paral1 {
+    grid-area: paral1;
+}
+.paral2 {
+    grid-area: paral2;
+}
+.hi1 {
+    grid-area: hi1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #4D4D4D;
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    margin-bottom: 0;
+}
+.hi1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    opacity: .4;
+}
+.hi1 a:hover {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    color: black;
+}
+.hi2 {
+    grid-area: hi2;
+}

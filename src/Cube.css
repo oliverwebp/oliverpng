@@ -1,0 +1,11 @@
+.contCu {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+Canvas {
+    height: 100vh;
+    background-color: aliceblue;
+}

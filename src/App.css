@@ -1,36 +1,4 @@
-
-.App {
-  text-align: center;
-}
-
-.poggywoggy {
-  background-color: #F3E9DC;
-  box-sizing: border-box;
-  display: grid;
-  height: 225vh;
-  grid-template-columns: 100%;
-  grid-template-rows: [row1-start] 10vh [row1-end] 200vh [third-line] 10vh [last-line];
-  grid-template-areas: 
-  "Navbar"
-  "Body"
-  "Footer";
-  grid-gap: 1.5rem;
-}
-
-.navy {
-  grid-area: Navbar;
-  grid-row-start: row1-start;
-  grid-row-end: row1-end;
-}
-
-Body {
-  grid-area: Body;
-  grid-row-start: row1-end;
-  grid-row-end: 3;
-}
-
-Footer {
-  grid-area: Footer;
-  grid-row-start: 3;
-  grid-row-end: last-line;
-}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  

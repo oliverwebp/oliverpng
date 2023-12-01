@@ -1,0 +1,48 @@
+.box {
+    width: 200px;
+    height: 4em;
+    background-color: #e1dfdd;
+    top:  0%;
+    left: 70%;
+    position:absolute;
+    overflow: hidden;
+
+}
+.downd {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transform-origin: bottom;
+  }
+.bgop {
+    background-color: #e1dfdd;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.colorfloor {
+    color: black;
+    text-align: right;
+    font-size: 4em;
+    top: 0;
+    font-weight: 700;
+    margin: 0;
+}
+.nom {
+    font-size: 7em;
+    font-weight: 500;
+    margin: 0;
+}
+.nom p {
+    margin: 0;
+}
+.pnom {
+    font-size: 5em;
+    font-weight: 400;
+    margin: 0;
+}

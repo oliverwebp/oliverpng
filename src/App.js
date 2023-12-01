@@ -1,17 +1,30 @@
-import './App.css';
-import Footer from './Footer.js';
-import Body from './Body';
-import Navbar from './Navbar';
-import React from 'react';
+import Home from './Home';
+import Opening from './Opening'
+import React, { useEffect, useState, } from 'react';
+import './App.css'
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
+  const [Op, setOp] = useState(false);
+
+  useEffect(()=> {
+    setOp(true)
+    setTimeout(()=> {
+      setOp(false)
+    }, 6000)
+  }, [])
   
   return (
-    <div className='poggywoggy'>
-      <Navbar className="navy"/>
-      <Body/>
-      <Footer/>
-    </div>
+    <AnimatePresence mode='wait'>
+        <div>
+        {
+          
+          Op ? 
+            <Opening/>:
+            <Home/>
+        }
+      </div>
+    </AnimatePresence>
   );
 }
 export default App;

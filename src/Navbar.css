@@ -1,69 +1,98 @@
-
-.App-logo {
-    height: 5vmin;
-    pointer-events: none;
-   
+.Nav-main {
     
-  }
-  
-  .Left-nav {
-    min-width: 25%;
-    display: flex;
-    gap: 5%;
-    max-width: 50%;
-    font-size: 1.8vmin;
-    height: 100%;
-    margin-left: 5%;
-    align-items: center;
-    justify-content: left;
-    
-  }
-  
-  .Right-nav {
-    min-width: 25%;
-    max-width: 60%;
-    height:100%;
-    padding-right: 2%;
-    padding-top: 0;
-    overflow: scroll;
-    display: flex;
-    align-items: center;
-    gap: 15%;
-    font-size: 2.5vmin;
-
-  }
-  .mobile-right {
-    display: none;
-  }
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
- .mobile-right {
-  
-    height: 100%;
-    max-width: 50%;
-    padding-right: 5%;
-    display:flex;
-    align-items: center;
- }
-
- .menuIMG {
-  width: 5vmin;
- }
- .Right-nav {
-  display: none;
- }
+  width: 100%;
+  height:100%;
+  box-sizing: border-box;
+  overscroll-behavior:none;
+  display: grid;
+  grid-template-columns: 2fr 6fr 4fr 6fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "Left-navS Left-navG middle-nav Right-nav scroller"
 }
 
+.Left-navS {
+  display: flex;
+  font-size: 1.8vmin;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 
-  .Nav-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height:100%;
-  
-  }
+}
+.Left-navG {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: left;
+
+  padding: auto;  
+}
+.middle-nav {
+  width: 100%;
+  align-items: center;
+  padding: auto;
+  font-size: 2vmin;
+  display: flex;
+  color: #dddde1;
+}
+.middle-nav a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Right-nav {
+  height:100%;
+  display: flex;
+  overflow: none;
+  align-items: center;
+  gap: 5%;
+  font-size: 2.5vmin;
+  color: #dddde1;
+  justify-content: right;
+}
+
+.Right-nav a {
+  text-decoration: none;
+  color: #dddde1;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  font-size: 2.5vmin;
+  text-decoration:none; 
+  color: #dddde1;
+  font-weight: 500;
+}
+.hover-underline-animation.active {
+  display: inline-block;
+  position: relative;
+  font-size: 2.5vmin;
+  text-decoration:none; 
+  color: #dddde1;
+  height: auto;
+  font-weight: 500;
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #dddde1;
+  transform-origin: bottom right;
+  transition: transform .5s ease-in-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
   
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
@@ -74,49 +103,15 @@
   .active {
     height: 10vh;
     position: fixed;
-    top: 0;
+    mix-blend-mode: difference;
     width: 100%;
-    
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: #444346;
-    z-index: 9999;
-    opacity: 1;
-    background-color: #DAB49D;
-    transition: background-color 800ms ease-in-out;
-    transition: opacity 800ms;
-    filter: drop-shadow(0 -10px 20px black);
-    box-sizing: inherit;
-    
-  }
-  .hidden {
-    height: 10vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: box-shadow .4s;
-    
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #444346;
-    background-color: #DAB49D;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0);
 
-    transition: opacity 400ms;
-    opacity: 0;
-    transition: background-color 1000ms ease-in-out;
-    transition: z-index 0.4s step-end, opacity 0.5s ease-in-out;
-    z-index: -1;
-    filter: drop-shadow(0 -10px 20px black);
-    box-sizing: inherit;
 
+
+    
   }
   .App-link {
     color: orange;
@@ -131,4 +126,69 @@
     }
   }
  
+  .App-logo {
+    height: 5vmin;
+    pointer-events: none;
+    
+  }
+  .stroke {
+    z-index: 1;
+    position: absolute;
+
+}
+.Afill {
+    z-index: 1;
+    position: absolute;
+}
+.drawing {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -10%);
+}
+@media only screen and (max-width: 768px) {
+ .mobile-right {
   
+    height: 100%;
+    max-width: 50%;
+    padding-right: 5%;
+    display:flex;
+    align-items: center;
+ }
+
+ .menuIMG {
+  width: 5vmin;
+ }
+ .Right-nav {
+  display: none;
+  mix-blend-mode: difference;
+
+ }
+}
+
+.scroller {
+  justify-content: right;
+  position: relative;
+  margin: auto;
+}
+
+#progress {
+  position: relative;
+  transform: rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+}
+
+.bg {
+  stroke: #dddde1;
+  opacity: 0.3;
+}
+
+#progress .indicator {
+  stroke: #dddde1;
+}
