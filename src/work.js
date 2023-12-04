@@ -50,6 +50,7 @@ class Work extends React.Component {
             <div className='txtL'></div>
             <div className='txtR'></div>
         </div>
+        
     <Footer/>
     </>
         
