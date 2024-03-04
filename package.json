@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "oliverpng",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
+    "jquery": "^3.7.1",
     "motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -32,6 +32,7 @@ class About extends React.Component{
     render() {
         return <>
         <Navbar className="navy"/>
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <div className="About">
         <div className='left'> 
@@ -116,10 +117,14 @@ class About extends React.Component{
                         <br></br>
                     <ParalTextR name1='hike2'></ParalTextR>
                 </div>
+               {/* 
+
                 <div className="cube">
                     <Cube></Cube>
                 </div>
+    */}
 
+                
         </div>
         <Footer/>
         </>

@@ -1,4 +1,39 @@
 ::-webkit-scrollbar {
     width: 0px;
   }
-  
+  @media only screen and (max-width: 992px) {
+    div.desk {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    div.mob {
+      display: none;
+    }
+  }
+
+
+.mob {
+  width: 100vw;
+  height: 100vh;
+  border: 5px solid;
+  text-align: center;
+}
+
+.toget{
+  padding-top: 30%;
+  --bg-size: 100%;
+  --color-one: hsl(15 90% 55%);
+  --color-two: hsl(40 95% 55%);
+  font-size: 5em;
+  background: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 1s infinite linear;
+}

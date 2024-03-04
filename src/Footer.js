@@ -1,10 +1,11 @@
 import './Footer.css';
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion'
 
 
 function Footer() {
+
     const [opacity, setOpacity] = React.useState(0);
 
     const handleMouseEnter = () => {
@@ -14,6 +15,19 @@ function Footer() {
     const handleMouseLeave = () => {
       setOpacity(0);
     };
+
+    const [text, setText] = useState("Click to Copy");
+
+    const doubleClick = () => {
+        setText("Copied!");
+
+        setTimeout(() => {
+            setText("Click to Copy");
+          }, 1500);
+
+        navigator.clipboard.writeText('oliverpngu@gmail.com')
+    }
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -31,6 +45,7 @@ function Footer() {
         hidden: { opacity: 0, y: 10 },
         visible
     }
+    
 
 
     
@@ -39,11 +54,11 @@ function Footer() {
     return (
         <motion.footer className='MainFooter'>
             <motion.div variants={container} className='inside'>
-                <motion.div initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}} variants={{visible: {transition: { staggerChildren:0.5}}}} className='dire'>
+                <motion.div initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}} variants={{visible: {transition: { staggerChildren:1}}}} className='dire'>
                     <motion.h1 variants={item}>Say Hello &#64;</motion.h1>
                     <motion.h2 variants={item} className='hover-underline-animationF' onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave} onClick={() => navigator.clipboard.writeText('oliverpngu@gmail.com')} >oliverpngu&#64;gmail.com</motion.h2>
-                    <div className='ctc' style={{opacity}}>Click to Copy</div>
+        onMouseLeave={handleMouseLeave} onClick={doubleClick} >oliverpngu&#64;gmail.com</motion.h2>
+                    <div className='ctc' style={{opacity}}>{text}</div>
                 </motion.div>
                 <div className='lft'>
                     <ul>

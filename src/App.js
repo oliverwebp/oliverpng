@@ -5,6 +5,7 @@ import './App.css'
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
+  
   const [Op, setOp] = useState(false);
 
   useEffect(()=> {
@@ -16,7 +17,7 @@ function App() {
   
   return (
     <AnimatePresence mode='wait'>
-        <div>
+        <div className='desk'>
         {
           
           Op ? 
@@ -24,7 +25,13 @@ function App() {
             <Home/>
         }
       </div>
+      <div className='mob'>
+          <p className='toget'>Mobile Site WIP</p>
+          <p> -visit on desktop or come back later!</p>
+          <p> Oliver Nguyen</p>
+      </div>
     </AnimatePresence>
   );
 }
+
 export default App;

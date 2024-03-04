@@ -3,15 +3,19 @@ import './Navbar.css';
 import {React} from 'react';
 import TimePT from './TimePT';
 import {NavLink, Link} from 'react-router-dom'
-import {motion, useScroll} from 'framer-motion'
+import { motion, useScroll, cubicBezier} from 'framer-motion'
 
-
-
-
-const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+const visible = { 
+  opacity: 1, y: 0, 
+  transition: { 
+    duration: .6, 
+    type:cubicBezier(0.65, 0, 0.35, 1),
+    delay: .3
+  } 
+};
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 25 },
   visible
 };
 const fillin = {
@@ -48,11 +52,28 @@ const draw = {
 };
 
 
+const keat = {
+  hidden: {opacity: 0, y:20 },
+  visibleB: (i) => {
+    const delay = 1 + i * 0.5;
+    
+    return {
+      opacity: 1,
+      y: 0,
+      transition: {
+        opacity: {delay, type:cubicBezier(0.65, 0, 0.35, 1), duration: .6,},
+        y: {delay, type:cubicBezier(0.65, 0, 0.35, 1), duration: .6,}
+        
+      },
+    };
+  }
+};
+
 export default function Navbar() {
 
   const { scrollYProgress } = useScroll();
 
-return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}} variants={{visible: {transition: { staggerChildren:0.3}}}}>
+return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, transition: {duration:1}}}>
     <header className='active'>
             <nav className='Nav-main'>
                 <div className='Left-navS'>
@@ -104,20 +125,17 @@ return  <motion.article initial="hidden" animate="visible" exit={{opacity: 0, tr
                     <TimePT/>
                   </motion.a>
                 </div>
-                <div className='Right-nav'>
-                    <motion.a variants={itemVariants}>
-                    <NavLink style={({ isActive }) => ({  
-                            borderBottom: isActive ? 'solid 1px' : 'none' })} className='hover-underline-animation' to='/About'>About</NavLink>
+                <motion.div className='Right-nav'  initial="hidden" animate="visibleB" >
+                    <motion.a variants={keat} custom={0} >
+                      <NavLink style={({ isActive }) => ({borderBottom: isActive ? 'solid 1px' : 'none' })} className='hover-underline-animation' to='/About'>About</NavLink>
                     </motion.a>
-                    <motion.a variants={itemVariants}>
-                    <NavLink style={({ isActive }) => ({  
-                            borderBottom: isActive ? 'solid 1px' : 'none' })} className='hover-underline-animation' to='/Contact'>Contact</NavLink>
+                    <motion.a variants={keat} custom={1}>
+                      <NavLink style={({ isActive }) => ({borderBottom: isActive ? 'solid 1px' : 'none' })} className='hover-underline-animation' to='/Contact'>Contact</NavLink>
                     </motion.a>
-                    <motion.a variants={itemVariants}>
-                    <NavLink style={({isActive}) => ({
-                      borderBottom: isActive ? 'solid 1px' : 'none'})} className='hover-underline-animation' to='/Work'>Work</NavLink>
-                     </motion.a>
-                </div>
+                    <motion.a variants={keat} custom={2}>
+                      <NavLink style={({isActive}) => ({borderBottom: isActive ? 'solid 1px' : 'none'})} className='hover-underline-animation' to='/Work'>Work</NavLink>
+                    </motion.a>
+                </motion.div>
                 <motion.div variants={itemVariants} className='scroller'>
                   <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="20" pathLength="1" className="bg" />

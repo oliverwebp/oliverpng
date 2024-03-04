@@ -3,17 +3,16 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import './Contact.css'
 import transition from "./transition";
+import {motion} from 'framer-motion';
 class Contact extends React.Component {
 
 
     render() {
-
-
         return <>   
-        <div className="bgact">
+        <motion.div className="bgact">
         <Navbar></Navbar>
         <Footer></Footer>
-        </div>
+        </motion.div>
     </>
     }
 }
